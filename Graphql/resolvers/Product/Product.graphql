@@ -1,0 +1,9 @@
+type Product {
+  name: String!
+}
+type Query {
+  getProduct(name: String!): Product
+}
+type Mutation {
+  createProduct(name: String): Product
+}

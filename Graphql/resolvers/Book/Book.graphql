@@ -1,0 +1,12 @@
+type Book {
+  name: String
+}
+type Query {
+  getBook(name: String!): Book
+}
+type Mutation {
+  createBook(name: String!): Book
+}
+type Subscription {
+  createBookSub: Book
+}
