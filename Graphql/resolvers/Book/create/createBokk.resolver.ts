@@ -4,8 +4,8 @@ import { BookModule } from "../generated/module-types";
 export const createBookResolver: BookModule.Resolvers = {
   Subscription: {
     createBookSub: {
-      subscribe(root, args, ctx, info) {
-        return ctx.injector.get(PubSub).asyncIterator(["CREATE_BOOK"]);
+      subscribe: async (root, args, ctx, info) => {
+        return ctx.injector.get(PubSub).asyncIterator(["CREATE_BOOK"]) as any;
       },
     },
   },
